@@ -1,0 +1,1 @@
+export { recipeService } from './index'

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-slate-200; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-canvas text-ink antialiased; font-family: 'DM Sans', sans-serif; }
+  button, a, input, select, textarea { @apply outline-none; }
+  :focus-visible { @apply ring-2 ring-brand-500 ring-offset-2; }
+  ::selection { @apply bg-brand-200 text-brand-900; }
+}
+
+@layer components {
+  .surface { @apply rounded-2xl border border-white/80 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-900; }
+  .page-grid { @apply grid gap-4 md:gap-5; }
+  .subtle-grid { background-image: radial-gradient(circle at 1px 1px, rgba(40,163,111,.13) 1px, transparent 0); background-size: 24px 24px; }
+}
+
+.dark body { @apply bg-slate-950 text-slate-100; }
+.recharts-cartesian-axis-tick-value { fill: #718078; font-size: 12px; }
+.recharts-tooltip-wrapper { outline: none !important; }
+
