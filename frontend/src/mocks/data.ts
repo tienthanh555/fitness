@@ -1,4 +1,4 @@
-import type { AIConversation, BodyMeasurement, Exercise, FoodSearchResult, Notification, Recipe, User, WaterLog, WorkoutPlan, WorkoutSession } from '@/types'
+import type { AIConversation, BodyMeasurement, Exercise, FoodSearchResult, Notification, Recipe, User, WorkoutPlan, WorkoutSession } from '@/types'
 
 export const nutritionTarget = { calories:1900, protein:130, carbs:210, fat:60, bmr:1520, tdee:2280 }
 export const todayNutrition = { calories:1420, protein:95, carbs:150, fat:41 }
@@ -37,18 +37,15 @@ export const workoutHistory:WorkoutSession[] = [
  {id:'session-pull',planName:'Pull Day',date:'2026-08-22',duration:58,calories:325,exercises:[]},
  {id:'session-legs',planName:'Leg Day',date:'2026-08-19',duration:72,calories:410,exercises:[]},
 ]
-export const waterLogs:WaterLog[] = [{id:'w1',time:'08:00',amount:300},{id:'w2',time:'10:30',amount:500},{id:'w3',time:'13:00',amount:300},{id:'w4',time:'16:00',amount:500}]
-export const waterWeek = [{day:'Mon',ml:2300},{day:'Tue',ml:2500},{day:'Wed',ml:2100},{day:'Thu',ml:2600},{day:'Fri',ml:2400},{day:'Sat',ml:1900},{day:'Sun',ml:1600}]
 export const recipes:Recipe[] = [{id:'chicken-rice-bowl',name:'Chicken Rice Bowl',description:'Lean protein, fragrant rice and crunchy greens with a light sesame dressing.',servings:2,prepTime:25,ingredients:[{id:'ri1',name:'Chicken Breast',quantity:400,unit:'g',nutrients:{calories:660,protein:124,carbs:0,fat:14}},{id:'ri2',name:'Steamed Rice',quantity:300,unit:'g',nutrients:{calories:390,protein:8,carbs:84,fat:1}},{id:'ri3',name:'Vegetables & dressing',quantity:250,unit:'g',nutrients:{calories:230,protein:4,carbs:32,fat:15}}],total:{calories:1280,protein:136,carbs:116,fat:30}}]
 export const notifications:Notification[] = [
  {id:'n1',type:'nutrition',title:'Protein target',message:"You're still 35g below today's protein target.",time:'10 minutes ago',read:false},
- {id:'n2',type:'water',title:'Water reminder',message:"You haven't logged water for 3 hours.",time:'1 hour ago',read:false},
  {id:'n3',type:'streak',title:'7 Day Streak 🔥',message:'Great job! Your consistency is paying off.',time:'Yesterday',read:true},
  {id:'n4',type:'workout',title:'Push Day is ready',message:'Your scheduled workout takes about 65 minutes.',time:'Yesterday',read:true},
 ]
 export const conversations:AIConversation[] = [{id:'c1',title:'Meal plan',updatedAt:'Today'},{id:'c2',title:'Protein advice',updatedAt:'Yesterday'},{id:'c3',title:'Weight loss',updatedAt:'22 Aug'}]
 export const adminUsers:User[] = [
- {id:'u1',name:'Hoang Nguyen',email:'hoang@nessfit.vn',role:'admin',status:'active',joinedAt:'2026-05-04'},
+ {id:'u1',name:'Thanh Pham',email:'thanh@nessfit.vn',role:'admin',status:'active',joinedAt:'2026-05-04'},
  {id:'u2',name:'Mai Anh Tran',email:'maianh@example.com',role:'user',status:'active',joinedAt:'2026-08-21'},
  {id:'u3',name:'Minh Khoa Le',email:'minhkhoa@example.com',role:'user',status:'active',joinedAt:'2026-08-18'},
  {id:'u4',name:'Linh Pham',email:'linhpham@example.com',role:'user',status:'suspended',joinedAt:'2026-07-29'},

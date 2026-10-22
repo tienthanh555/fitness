@@ -18,9 +18,8 @@ export interface WorkoutPlan { id:string; name:string; goal:string; description:
 export interface WorkoutSet { id:string; weight:number; reps:number; completed:boolean }
 export interface WorkoutSessionExercise { exercise:Exercise; sets:WorkoutSet[] }
 export interface WorkoutSession { id:string; planName:string; date:string; duration:number; calories:number; exercises:WorkoutSessionExercise[] }
-export interface WaterLog { id:string; time:string; amount:number }
 export interface AIConversation { id:string; title:string; updatedAt:string }
 export interface AIMessage { id:string; role:'user'|'assistant'; content:string; createdAt:string }
-export interface Notification { id:string; type:'nutrition'|'workout'|'water'|'goal'|'streak'|'system'; title:string; message:string; time:string; read:boolean }
+export interface Notification { id:string; type:'nutrition'|'workout'|'goal'|'streak'|'system'; title:string; message:string; time:string; read:boolean }
 export interface UserStreak { current:number; longest:number; activeDays:boolean[] }
 
